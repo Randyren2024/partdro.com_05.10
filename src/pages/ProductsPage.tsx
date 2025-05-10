@@ -58,7 +58,7 @@ const ProductsPage: React.FC = () => {
           </button>
         </div>
       </div>
-      
+
       {/* 产品展示 */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {activeCategory === 'drone' && drones.map(product => (
@@ -110,7 +110,7 @@ const ProductsPage: React.FC = () => {
                 {t('products.view_details')}
               </a>
             </div>
-          </div>
+              </div>
         ))}
         
         {activeCategory === 'parts' && parts.map(product => (
@@ -121,7 +121,7 @@ const ProductsPage: React.FC = () => {
                 alt={t(product.nameKey)} 
                 className="w-full h-full object-cover"
               />
-            </div>
+              </div>
             <div className="p-4">
               <h3 className="text-xl font-semibold mb-2 text-gray-800">
                 {t(product.nameKey)}

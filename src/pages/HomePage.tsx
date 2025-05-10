@@ -77,9 +77,9 @@ function HomePage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-3">{t('products.title')}</h2>
             <p className="text-gray-600">{t('products.subtitle')}</p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
+      </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
             {featuredProducts.map(product => (
               <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden">
                 <div className="relative h-48 overflow-hidden">
@@ -187,7 +187,7 @@ function HomePage() {
           </Link>
         </div>
       </section>
-    </div>
+      </div>
   )
 }
 
