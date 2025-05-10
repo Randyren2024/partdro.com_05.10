@@ -1,76 +1,169 @@
-import React from 'react'
-import { Typography, Card, Tag, Button } from 'antd'
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import SEO from '../components/SEO';
+import { getProductsByCategory } from '../data/products';
 
-const { Title, Paragraph } = Typography
+const ProductsPage: React.FC = () => {
+  const { t } = useTranslation();
+  const [activeCategory, setActiveCategory] = useState<'drone' | 'hydrogen' | 'parts'>('drone');
 
-const products = [
-  {
-    id: 1,
-    name: 'Enterprise Solution',
-    description: 'Complete business management system for large organizations',
-    price: '$999/month',
-    features: ['Cloud-based', 'Analytics', '24/7 Support'],
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800'
-  },
-  {
-    id: 2,
-    name: 'Business Suite',
-    description: 'Perfect for growing businesses and medium-sized teams',
-    price: '$499/month',
-    features: ['Team Management', 'Reports', 'API Access'],
-    image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800'
-  },
-  {
-    id: 3,
-    name: 'Starter Pack',
-    description: 'Essential tools for small businesses and startups',
-    price: '$199/month',
-    features: ['Basic Features', 'Email Support', 'Updates'],
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800'
-  }
-]
+  const drones = getProductsByCategory('drone');
+  const hydrogenProducts = getProductsByCategory('hydrogen');
+  const parts = getProductsByCategory('parts');
 
-function ProductsPage() {
   return (
-    <div className="space-y-8">
-      <div className="text-center">
-        <Title level={1}>Our Products</Title>
-        <Paragraph className="text-lg text-gray-600">
-          Discover solutions tailored to your business needs
-        </Paragraph>
+    <div className="container mx-auto px-4 py-8">
+      <SEO title={t('products.title')} description={t('products.subtitle')} />
+      
+      <div className="text-center mb-10">
+        <h1 className="text-3xl font-bold mb-2">{t('products.title')}</h1>
+        <p className="text-gray-600">{t('products.subtitle')}</p>
       </div>
-
-      <div className="grid md:grid-cols-3 gap-8">
-        {products.map(product => (
-          <Card
-            key={product.id}
-            cover={
-              <img
-                alt={product.name}
-                src={product.image}
-                className="h-48 object-cover"
-              />
-            }
-            className="h-full flex flex-col"
+      
+      {/* 类别选择器 */}
+      <div className="flex justify-center mb-8">
+        <div className="inline-flex rounded-md shadow-sm" role="group">
+          <button
+            type="button"
+            className={`px-4 py-2 text-sm font-medium rounded-l-lg ${
+              activeCategory === 'drone' 
+                ? 'bg-blue-600 text-white' 
+                : 'bg-white text-gray-700 hover:bg-gray-100'
+            }`}
+            onClick={() => setActiveCategory('drone')}
           >
-            <Title level={4}>{product.name}</Title>
-            <Paragraph>{product.description}</Paragraph>
-            <div className="space-y-4 mt-auto">
-              <div className="flex flex-wrap gap-2">
-                {product.features.map(feature => (
-                  <Tag key={feature} color="blue">{feature}</Tag>
-                ))}
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-lg font-semibold">{product.price}</span>
-                <Button type="primary">Learn More</Button>
-              </div>
+            {t('products.categories.drones')}
+          </button>
+          <button
+            type="button"
+            className={`px-4 py-2 text-sm font-medium ${
+              activeCategory === 'hydrogen' 
+                ? 'bg-blue-600 text-white' 
+                : 'bg-white text-gray-700 hover:bg-gray-100'
+            }`}
+            onClick={() => setActiveCategory('hydrogen')}
+          >
+            {t('products.categories.hydrogen')}
+          </button>
+          <button
+            type="button"
+            className={`px-4 py-2 text-sm font-medium rounded-r-lg ${
+              activeCategory === 'parts' 
+                ? 'bg-blue-600 text-white' 
+                : 'bg-white text-gray-700 hover:bg-gray-100'
+            }`}
+            onClick={() => setActiveCategory('parts')}
+          >
+            {t('products.categories.parts')}
+          </button>
+        </div>
+      </div>
+      
+      {/* 产品展示 */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {activeCategory === 'drone' && drones.map(product => (
+          <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="relative h-48 overflow-hidden">
+              <img 
+                src={product.imageUrl} 
+                alt={t(product.nameKey)} 
+                className="w-full h-full object-cover"
+              />
             </div>
-          </Card>
+            <div className="p-4">
+              <h3 className="text-xl font-semibold mb-2 text-gray-800">
+                {t(product.nameKey)}
+              </h3>
+              <p className="text-gray-600 mb-4 line-clamp-3">
+                {t(product.descriptionKey)}
+              </p>
+              <a 
+                href={`#product-${product.id}`}
+                className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
+              >
+                {t('products.view_details')}
+              </a>
+            </div>
+          </div>
+        ))}
+        
+        {activeCategory === 'hydrogen' && hydrogenProducts.map(product => (
+          <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="relative h-48 overflow-hidden">
+              <img 
+                src={product.imageUrl} 
+                alt={t(product.nameKey)} 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="p-4">
+              <h3 className="text-xl font-semibold mb-2 text-gray-800">
+                {t(product.nameKey)}
+              </h3>
+              <p className="text-gray-600 mb-4 line-clamp-3">
+                {t(product.descriptionKey)}
+              </p>
+              <a 
+                href={`#product-${product.id}`}
+                className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
+              >
+                {t('products.view_details')}
+              </a>
+            </div>
+          </div>
+        ))}
+        
+        {activeCategory === 'parts' && parts.map(product => (
+          <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="relative h-48 overflow-hidden">
+              <img 
+                src={product.imageUrl} 
+                alt={t(product.nameKey)} 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="p-4">
+              <h3 className="text-xl font-semibold mb-2 text-gray-800">
+                {t(product.nameKey)}
+              </h3>
+              <p className="text-gray-600 mb-4 line-clamp-3">
+                {t(product.descriptionKey)}
+              </p>
+              <a 
+                href={`#product-${product.id}`}
+                className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
+              >
+                {t('products.view_details')}
+              </a>
+            </div>
+          </div>
         ))}
       </div>
+      
+      {/* 应用场景部分 */}
+      <div className="mt-16">
+        <h2 className="text-2xl font-bold text-center mb-8">{t('scenes.title')}</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-gray-100 rounded-lg p-6">
+            <h3 className="text-xl font-semibold mb-3">{t('scenes.logistics.title')}</h3>
+            <p>{t('scenes.logistics.description')}</p>
+          </div>
+          <div className="bg-gray-100 rounded-lg p-6">
+            <h3 className="text-xl font-semibold mb-3">{t('scenes.agriculture.title')}</h3>
+            <p>{t('scenes.agriculture.description')}</p>
+          </div>
+          <div className="bg-gray-100 rounded-lg p-6">
+            <h3 className="text-xl font-semibold mb-3">{t('scenes.emergency.title')}</h3>
+            <p>{t('scenes.emergency.description')}</p>
+          </div>
+          <div className="bg-gray-100 rounded-lg p-6">
+            <h3 className="text-xl font-semibold mb-3">{t('scenes.inspection.title')}</h3>
+            <p>{t('scenes.inspection.description')}</p>
+          </div>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProductsPage
+export default ProductsPage;

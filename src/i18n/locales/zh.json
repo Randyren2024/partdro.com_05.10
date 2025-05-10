@@ -1,28 +1,173 @@
 {
+  "app": {
+    "name": "HydroDrone",
+    "description": "专业无人机和氢能解决方案"
+  },
   "nav": {
     "home": "首页",
     "products": "产品",
-    "blog": "博客",
     "about": "关于我们",
-    "contact": "联系我们"
+    "blog": "博客",
+    "contact": "联系我们",
+    "admin": "管理"
   },
   "home": {
-    "welcome": "欢迎来到我们的公司",
-    "subtitle": "我们专注于提供创新解决方案，帮助企业在数字时代蓬勃发展。",
-    "learnMore": "了解更多",
+    "hero": {
+      "title": "下一代氢燃料电池无人机解决方案",
+      "subtitle": "更长的飞行时间，更短的加氢时间，为各行业提供高效的无人机和氢能技术"
+    },
     "features": {
-      "innovation": {
-        "title": "创新",
-        "description": "以尖端技术解决方案突破界限。"
+      "title": "我们的优势",
+      "subtitle": "为什么选择我们的氢能无人机",
+      "feature1": {
+        "title": "超长续航",
+        "description": "我们的氢燃料电池无人机可以连续飞行数小时，远超传统电池无人机"
       },
-      "quality": {
-        "title": "质量",
-        "description": "在每个项目中都追求卓越。"
+      "feature2": {
+        "title": "快速补给",
+        "description": "只需几分钟即可完成氢燃料补给，大大减少等待时间"
       },
-      "support": {
-        "title": "支持",
-        "description": "24/7专业支持确保您的成功。"
+      "feature3": {
+        "title": "环保节能",
+        "description": "零排放，只产生水，为环境保护做出贡献"
       }
+    },
+    "cta": {
+      "title": "准备好开始了吗？",
+      "subtitle": "联系我们，获取最适合您业务的氢能解决方案",
+      "button": "联系我们"
+    }
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "有任何问题？请填写下面的表单",
+    "form": {
+      "name": "姓名",
+      "email": "电子邮件",
+      "message": "留言",
+      "submit": "发送"
+    },
+    "info": {
+      "address": "地址",
+      "phone": "电话",
+      "email": "邮箱"
+    }
+  },
+  "about": {
+    "title": "关于我们",
+    "subtitle": "HydroDrone的故事",
+    "mission": {
+      "title": "我们的使命",
+      "description": "我们致力于通过创新的氢能技术，为客户提供更高效、更环保的无人机解决方案"
+    },
+    "vision": {
+      "title": "我们的愿景",
+      "description": "成为全球领先的氢能无人机和能源解决方案提供商，推动行业向可持续发展方向转变"
+    },
+    "team": {
+      "title": "我们的团队",
+      "description": "由经验丰富的工程师、研究人员和行业专家组成，致力于推动氢能技术的创新和应用"
+    }
+  },
+  "products": {
+    "title": "我们的产品",
+    "subtitle": "探索我们全系列的氢能产品",
+    "categories": {
+      "drones": "无人机",
+      "hydrogen": "氢能产品",
+      "parts": "零部件"
+    },
+    "view_details": "查看详情",
+    "specifications": "技术规格",
+    "features": "主要特点",
+    
+    "h100": {
+      "name": "擎天 H100 重载氢燃料电池无人机",
+      "description": "专为长时间、重载商业应用设计的氢燃料电池无人机，提供超长续航和强大的负载能力。",
+      "feature1": "120分钟超长续航，行业领先",
+      "feature2": "15kg有效载荷，满足各种商业应用需求",
+      "feature3": "一体化设计，操作简单，维护便捷"
+    },
+    "h25": {
+      "name": "青鸾 H25 轻型氢燃料电池无人机",
+      "description": "轻量化设计的多功能氢燃料电池无人机，适合各种中小型作业和监测任务。",
+      "feature1": "60分钟持续飞行，效率翻倍",
+      "feature2": "5kg载重能力，满足常规应用需求",
+      "feature3": "便携折叠设计，轻松部署与运输"
+    },
+    
+    "hits": {
+      "name": "HiTS系列氢燃料电池",
+      "description": "高效可靠的模块化氢燃料电池系统，为无人机和其他应用提供持久动力。",
+      "feature1": "模块化设计，功率范围3-10kW可灵活配置",
+      "feature2": "高达55%的能量转换效率，行业领先水平",
+      "feature3": "5000小时使用寿命，大幅降低使用成本"
+    },
+    "hbike": {
+      "name": "氢电共享两轮车",
+      "description": "创新的氢燃料电池驱动共享单车，提供更长续航和更快补给速度。",
+      "feature1": "单次加氢可行驶100公里，远超普通电动车",
+      "feature2": "3分钟快速加氢，解决充电痛点",
+      "feature3": "智能物联网连接，提供完整共享解决方案"
+    },
+    "hcart": {
+      "name": "氢能观光车",
+      "description": "环保静音的氢燃料电池观光车，适用于景区、园区等场所。",
+      "feature1": "零排放零噪音，完美适合景区环境",
+      "feature2": "8座大容量，满足团队观光需求",
+      "feature3": "200公里长续航，全天候运营无忧"
+    },
+    
+    "refuelport": {
+      "name": "高压加氢口",
+      "description": "安全可靠的高压加氢接口，兼容35MPa和70MPa标准。",
+      "feature1": "符合国际安全标准，获ISO认证",
+      "feature2": "防漏防误操作设计，确保使用安全",
+      "feature3": "快速连接技术，提高加氢效率",
+      "material": "高强度特种合金，耐腐蚀耐磨损"
+    },
+    "valve": {
+      "name": "氢气瓶口阀",
+      "description": "高精度氢气瓶控制阀门，确保氢气安全存储和使用。",
+      "feature1": "精密流量控制，提供稳定气源",
+      "feature2": "多重安全保护机制，防止意外泄漏",
+      "feature3": "耐高压耐腐蚀设计，长寿命运行",
+      "material": "特种钢合金，极端环境下保持稳定性能"
+    },
+    "reducer": {
+      "name": "氢气减压阀组",
+      "description": "精密氢气压力调节系统，将高压氢气安全转换为设备可用压力。",
+      "feature1": "精确稳定的输出压力控制",
+      "feature2": "多级减压设计，安全可靠",
+      "feature3": "模块化结构，易于安装和维护"
+    }
+  },
+  "scenes": {
+    "title": "应用场景",
+    "subtitle": "我们的产品在各行业的应用",
+    "logistics": {
+      "title": "物流运输",
+      "description": "长续航无人机解决最后一公里配送和大范围物流监控"
+    },
+    "agriculture": {
+      "title": "农业监测",
+      "description": "高效精准的农田监测和植保作业，提升农业生产效率"
+    },
+    "emergency": {
+      "title": "应急救援",
+      "description": "快速响应的医疗物资运输和灾区侦查，抢占救援黄金时间"
+    },
+    "inspection": {
+      "title": "基础设施检查",
+      "description": "电力线路、桥梁、铁路等基础设施的高效安全检查"
+    }
+  },
+  "footer": {
+    "copyright": "© 2023 HydroDrone。保留所有权利。",
+    "links": {
+      "privacy": "隐私政策",
+      "terms": "使用条款",
+      "sitemap": "网站地图"
     }
   }
 }
