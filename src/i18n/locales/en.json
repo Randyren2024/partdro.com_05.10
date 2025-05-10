@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "blog": "Blog",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "home": {
+    "welcome": "Welcome to Our Company",
+    "subtitle": "We specialize in delivering innovative solutions that help businesses thrive in the digital age.",
+    "learnMore": "Learn More",
+    "features": {
+      "innovation": {
+        "title": "Innovation",
+        "description": "Pushing boundaries with cutting-edge technology solutions."
+      },
+      "quality": {
+        "title": "Quality",
+        "description": "Delivering excellence in every project we undertake."
+      },
+      "support": {
+        "title": "Support",
+        "description": "24/7 dedicated support to ensure your success."
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "home": "首页",
+    "products": "产品",
+    "blog": "博客",
+    "about": "关于我们",
+    "contact": "联系我们"
+  },
+  "home": {
+    "welcome": "欢迎来到我们的公司",
+    "subtitle": "我们专注于提供创新解决方案，帮助企业在数字时代蓬勃发展。",
+    "learnMore": "了解更多",
+    "features": {
+      "innovation": {
+        "title": "创新",
+        "description": "以尖端技术解决方案突破界限。"
+      },
+      "quality": {
+        "title": "质量",
+        "description": "在每个项目中都追求卓越。"
+      },
+      "support": {
+        "title": "支持",
+        "description": "24/7专业支持确保您的成功。"
+      }
+    }
+  }
+}

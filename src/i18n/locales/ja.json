@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "products": "製品",
+    "blog": "ブログ",
+    "about": "会社概要",
+    "contact": "お問い合わせ"
+  },
+  "home": {
+    "welcome": "私たちの会社へようこそ",
+    "subtitle": "デジタル時代のビジネス成功を支援する革新的なソリューションを提供しています。",
+    "learnMore": "詳細を見る",
+    "features": {
+      "innovation": {
+        "title": "イノベーション",
+        "description": "最先端のテクノロジーソリューションで限界に挑戦。"
+      },
+      "quality": {
+        "title": "品質",
+        "description": "すべてのプロジェクトで卓越性を追求。"
+      },
+      "support": {
+        "title": "サポート",
+        "description": "24時間365日の専任サポートでお客様の成功を確実に。"
+      }
+    }
+  }
+}

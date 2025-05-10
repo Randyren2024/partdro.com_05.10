@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "products": "Produkte",
+    "blog": "Blog",
+    "about": "Über Uns",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "welcome": "Willkommen bei Unserem Unternehmen",
+    "subtitle": "Wir sind spezialisiert auf innovative Lösungen, die Unternehmen im digitalen Zeitalter erfolgreich machen.",
+    "learnMore": "Mehr Erfahren",
+    "features": {
+      "innovation": {
+        "title": "Innovation",
+        "description": "Grenzen überschreiten mit modernsten Technologielösungen."
+      },
+      "quality": {
+        "title": "Qualität",
+        "description": "Exzellenz in jedem Projekt, das wir übernehmen."
+      },
+      "support": {
+        "title": "Support",
+        "description": "24/7 engagierter Support für Ihren Erfolg."
+      }
+    }
+  }
+}

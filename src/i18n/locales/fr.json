@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "products": "Produits",
+    "blog": "Blog",
+    "about": "À Propos",
+    "contact": "Contact"
+  },
+  "home": {
+    "welcome": "Bienvenue dans Notre Entreprise",
+    "subtitle": "Nous sommes spécialisés dans la fourniture de solutions innovantes qui aident les entreprises à prospérer à l'ère numérique.",
+    "learnMore": "En Savoir Plus",
+    "features": {
+      "innovation": {
+        "title": "Innovation",
+        "description": "Repousser les limites avec des solutions technologiques de pointe."
+      },
+      "quality": {
+        "title": "Qualité",
+        "description": "Livrer l'excellence dans chaque projet que nous entreprenons."
+      },
+      "support": {
+        "title": "Support",
+        "description": "Support dédié 24/7 pour assurer votre succès."
+      }
+    }
+  }
+}
