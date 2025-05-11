@@ -16,8 +16,7 @@ const config: types.ReactBricksConfig = {
   bricks: [...website],
   logo: '/logo.svg',
   contentClassName: 'content',
-  renderLocalLink: (props) => {
-    const { href, children, className } = props
+  renderLocalLink: ({ href, children, className }) => {
     return <a href={href} className={className}>{children}</a>
   },
   navigate: (path: string) => {
