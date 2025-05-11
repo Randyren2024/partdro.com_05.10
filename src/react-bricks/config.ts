@@ -3,8 +3,8 @@ import { website } from 'react-bricks-ui'
 import { Link } from 'react-router-dom'
 
 const config: types.ReactBricksConfig = {
-  appId: '2d5c5c1c-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
-  apiKey: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
+  appId: 'caf9f8c8-4fea-454e-b9cf-7e3705cdb7a3',
+  apiKey: '477add40-bf68-47cb-aa58-09b64a1f756d',
   pageTypes: [
     {
       name: 'page',
