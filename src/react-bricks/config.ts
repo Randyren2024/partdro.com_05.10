@@ -1,6 +1,5 @@
 import { types } from 'react-bricks/frontend'
 import { website } from 'react-bricks-ui'
-import { Link } from 'react-router-dom'
 
 const config: types.ReactBricksConfig = {
   appId: 'caf9f8c8-4fea-454e-b9cf-7e3705cdb7a3',
@@ -18,7 +17,7 @@ const config: types.ReactBricksConfig = {
   logo: '/logo.svg',
   contentClassName: 'content',
   renderLocalLink: ({ href, children, className }) => {
-    return <Link to={href} className={className}>{children}</Link>
+    return <a href={href} className={className}>{children}</a>
   },
   navigate: (path: string) => {
     window.location.href = path
