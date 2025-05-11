@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Layout, Menu } from 'antd'
 import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom'
 import { Home, Package, BookOpen, Users, Phone, Settings } from 'lucide-react'
@@ -10,7 +10,6 @@ import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
 import AdminPage from './pages/AdminPage'
 import LanguageSelector from './components/LanguageSelector'
-import { trackPageView } from './utils/analytics'
 
 const { Header, Content, Footer } = Layout
 
@@ -31,7 +30,6 @@ function App() {
         </Header>
 
         <Content className="container mx-auto py-8 px-4">
-          <RouteTracker />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/products" element={<ProductsPage />} />
@@ -50,16 +48,6 @@ function App() {
       </Layout>
     </Router>
   )
-}
-
-function RouteTracker() {
-  const location = useLocation();
-
-  useEffect(() => {
-    trackPageView(location.pathname);
-  }, [location]);
-
-  return null;
 }
 
 function NavigationMenu() {
